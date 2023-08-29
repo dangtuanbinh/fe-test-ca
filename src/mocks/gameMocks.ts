@@ -11,23 +11,23 @@ export const GameMocks = [
     gameImg: game1,
   },
   {
-    id: 1,
+    id: 2,
     gameImg: game2,
   },
   {
-    id: 1,
+    id: 3,
     gameImg: game3,
   },
   {
-    id: 1,
+    id: 4,
     gameImg: game4,
   },
   {
-    id: 1,
+    id: 5,
     gameImg: game5,
   },
   {
-    id: 1,
+    id: 6,
     gameImg: game6,
   },
 ];

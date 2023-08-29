@@ -11,6 +11,7 @@ import Jackpot from "../../components/jackpot";
 import { GameMocks } from "../../mocks/gameMocks";
 import bottomNote from "../../assets/images/bottomNote.png";
 import viewMore from "../../assets/images/viewMore.png";
+import MobileInfo from "../../components/mobileInfo";
 
 const classNamePrefix = "register-page";
 
@@ -26,7 +27,14 @@ const RegisterPage = () => {
           <div className={`${classNamePrefix}__center`}>
             <img className={`${classNamePrefix}__logo`} src={logo} alt="" />
             <img className={`${classNamePrefix}__slogan`} src={slogan} alt="" />
-            <RegisterForm />
+
+            <div className={`${classNamePrefix}__mobile-info`}>
+              <MobileInfo />
+            </div>
+
+            <div className={`${classNamePrefix}__register-form`}>
+              <RegisterForm />
+            </div>
           </div>
 
           <div className={`${classNamePrefix}__right`}>
@@ -36,11 +44,13 @@ const RegisterPage = () => {
         </div>
 
         <div className={`${classNamePrefix}__content-bottom`}>
-          <Jackpot data={GameMocks} />
+          <div className={`${classNamePrefix}__jackpot`}>
+            <Jackpot data={GameMocks} />
+          </div>
 
           <div className={`${classNamePrefix}__bottom-note`}>
             <div className={`${classNamePrefix}__bottom-note-img`}>
-              <img src={bottomNote} alt="" />
+              <img className={`${classNamePrefix}__bottom-note-img-sum`} src={bottomNote} alt="" />
               <img src={viewMore} alt="" />
             </div>
           </div>
