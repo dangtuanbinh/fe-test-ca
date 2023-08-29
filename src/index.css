@@ -1,0 +1,93 @@
+
+
+
+body {
+  margin: 0;
+  font-family: Apple SD Gothic Neo, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: Apple SD Gothic Neo, source-code-pro, Menlo, Monaco, Consolas,
+    "Courier New", monospace;
+}
+
+.text-ellipsis {
+  position: relative;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 96%;
+  max-width: 96%;
+
+  .text-ellipsis-dropdown {
+    position: absolute;
+    z-index: 1000;
+    bottom: -40px;
+
+    width: 100%;
+    min-height: 50px;
+  }
+
+  .text-ellipsis-dropdown-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 8px 14px;
+
+    cursor: pointer;
+
+    border: 1px solid #eee;
+
+    background: #eef8f5;
+
+    box-shadow: 4px 4px 16px 0px rgba(237, 237, 237, 0.2);
+  }
+
+  .text-ellipsis-dropdown-fail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 8px 14px;
+
+    color: #757575;
+    font-family: Noto Sans KR;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+
+    div {
+      color: #757575;
+    }
+
+    span {
+      color: #479e83;
+      text-decoration-line: underline;
+    }
+  }
+}
+.text-ellipsis__2line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  width: 96%;
+  max-width: 96%;
+
+  height: 40px; /* =2 line-height */
+}
+
+.app-wrapper {
+  width: 100%;
+  margin: 0 auto;
+}

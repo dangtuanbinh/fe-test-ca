@@ -17,3 +17,37 @@ export const getFullDateTime = () => {
 
   return fullDateTime
 }
+
+export const removeNonNumeric = (num: string) => {
+  const result = ~~num.replace(/[^\d]/g, "");
+  return result;
+};
+
+export const addCommas = (num: any, style = ".") => {
+  return num.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, style);
+};
+
+export const addCompFunc = (regisArr: []) => {
+  let regisArrLength_temp: any = [...regisArr];
+
+  let length = regisArrLength_temp.length;
+  regisArrLength_temp.push({
+    uniKey: length + 1,
+    isShow: true,
+  });
+
+  return regisArrLength_temp;
+};
+
+export const formatMoney = (text: any) => {
+  if (!text) {
+    return "0";
+  } else {
+    if (+text < 0) {
+      text = +text * -1;
+      return "-" + addCommas(removeNonNumeric(text.toString()));
+    } else {
+      return addCommas(removeNonNumeric(text.toString()));
+    }
+  }
+};

@@ -1,0 +1,44 @@
+.jackpot {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  width: 100%;
+
+  &__left {
+    padding-left: 30px;
+
+    img {
+      margin-right: 12px;
+
+      cursor: pointer;
+    }
+  }
+
+  &__center {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    height: 160px;
+  }
+
+  &__center-floating {
+    position: absolute;
+    top: -30px;
+    left: -510px;
+  }
+
+  &__right {
+    padding-right: 30px;
+
+    img {
+      margin-left: 12px;
+
+      cursor: pointer;
+    }
+  }
+}
