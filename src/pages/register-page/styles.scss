@@ -56,23 +56,77 @@
 
   &__content-bottom {
     width: 100%;
-
   }
 
-  &__bottom-note{
+  &__bottom-note {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 
     width: 100%;
-    
+
     margin-top: 5px;
   }
 
-  &__bottom-note-img{
+  &__bottom-note-img {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
   }
+
+  &__mobile-info{
+    display: none;
+
+    width: 100%;
+  }
 }
+
+@media screen and (max-width: 657px) {
+  .register-page {
+    &__mobile-info{
+      display: block;
+    }
+    
+    &__content{
+      justify-content: unset;
+
+      min-height: 1240px;
+
+      padding: 0;
+
+      background-image: url("../../assets//images/mobileBg.png");
+    }
+
+    &__register-form{
+      display: none;
+    }
+
+    &__left,
+    &__right, &__jackpot {
+      display: none;
+    }
+
+    &__center{
+      width: 100%;
+
+      margin-left: 0;
+    }
+
+    &__slogan{
+      width: 588px;
+      height: 95px;
+    }
+
+    &__logo{
+      width: 195px;
+      height: 195px;
+    }
+
+    &__bottom-note-img-sum{
+      width: 600px;
+    }
+  }
+}
+
+
