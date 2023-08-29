@@ -1,5 +1,5 @@
 import HomePage from "../pages/home-page";
-import LoginPage from "../pages/login-page";
+import RegisterPage from "../pages/register-page";
 
 export const PrivateRoutes = [
   {
@@ -12,8 +12,8 @@ export const PrivateRoutes = [
 
 export const PublicRoutes = [
   {
-    path: "/login",
-    element: <LoginPage />,
+    path: "/auth",
+    element: <RegisterPage />,
     name: "Login",
   },
 ];

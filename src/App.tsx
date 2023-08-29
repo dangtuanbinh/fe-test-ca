@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { PrivateRoutes, PublicRoutes } from "./routers";
 import Layout from "./components/layout";
+import "./index.css";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
           <Route key={index} path={item.path} element={item.element} />
         ))}
       </Route>
-      <Route path="login">
+      <Route path="auth">
         {PublicRoutes.map((item, index) => (
           <Route key={index} path={item.path} element={item.element} />
         ))}
